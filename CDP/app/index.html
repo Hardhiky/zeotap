@@ -1,0 +1,20 @@
+<!-- app/templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CDP Support Bot</title>
+</head>
+<body>
+    <h1>CDP Support Agent</h1>
+    <form method="post">
+        <input type="text" name="query" placeholder="Ask a how-to question..." required>
+        <button type="submit">Ask</button>
+    </form>
+    {% if response %}
+    <div>
+        <h3>Answer:</h3>
+        <pre>{{ response }}</pre>
+    </div>
+    {% endif %}
+</body>
+</html>
